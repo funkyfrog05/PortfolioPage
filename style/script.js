@@ -6,7 +6,7 @@ var counter = 0;
 /* Function to stick the nav bar */
 function stickyNav() {
     if (window.pageYOffset >= sticky) {
-        navlist.classList.add("sticky")
+        navlist.classList.add("sticky");
     }
     else {
         navlist.classList.remove("sticky");
@@ -14,7 +14,18 @@ function stickyNav() {
 }
 
 function changeColor() {
-    color = colorArray[counter]
+    color = colorArray[counter];
     document.body.style.background = color;
     counter == colorArray.length ? counter = 0 : counter +=1;
+
+
+    if(counter == colorArray.length){
+        counter = 0;
+    }else{
+        counter +=1;
+    }
+}
+
+function alertFunction(){
+    alert("This is an alert.");
 }
